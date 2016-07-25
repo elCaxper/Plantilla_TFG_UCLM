@@ -1,0 +1,389 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			Capitulo 2					              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Estado del arte de la robótica modular} \label{cap2}
+
+%En este capítulo se muestran algunos de los robots modulares que existen actualmente.
+
+Un robot generalmente está diseñado para realizar una actividad en particular, o en el mejor de los casos actividades estrechamente relacionadas. Esto por supuesto no es la situación ideal, ya que muchos trabajos requieren un gran número de actividades muy diferentes. Por ejemplo, la construcción de las paredes de una casa y la instalación de fontanería y electricidad requieren muy diferentes herramientas y técnicas. En la práctica esto significa que va a tener que diseñar varios robots diferentes o uno muy complejo.
+
+La robótica modular es una respuesta a este tipo de problemas. Los robots modulares típicamente consisten en una serie de módulos independientes, que se pueden mover y conectar de muchas maneras diferentes. Cada uno de los módulos puede tener su propia fuente de alimentación y capacidad de computación. Todos los módulos deben cooperar para llegar a un fin común.
+
+Idealmente un robot modular consistiría en un número grande de módulos pequeños. Si todos los módulos que forman el robot son iguales se denomina robot homogéneo mientras que si no todos los módulos son iguales el robot será heterogéneo.
+
+La robótica modular auto-configurable permite crear robots a partir de módulos que tienen la capacidad de ensamblarse unos con respecto a otros. Esto permite que los robots modulares puedan adoptar diferentes configuraciones y modos de caminar en función del terreno en el que se desplacen.
+%Un robot auto-reconfigurable es una máquina construida a partir de módulos más pequeños que reorganizándose unos respecto a otros pueden cambiar la forma y funcionalidad de la máquina completa. Tener las habilidades de auto-ensamblaje coordinado y auto-reconfiguración podría permitir a un sistema robótico la capacidad de adaptarse a diferentes entornos sobre la marcha.
+
+Si se propone la situación en la que un robot tiene que ser capaz de moverse por un terreno plano, pasar por debajo de la barandilla, bajar un escalón de 60 cm y desplazarse por un terreno desigual y con maleza.
+Este problema se puede resolver utilizando un robot modular reconfigurable, habría que determinar qué configuraciones del robot son las mejores para cada tipo de terreno. Así, el robot inicialmente utilizaría
+una configuración de tipo rueda (para cruzar el terreno plano), a continuación la ``rueda''se abriría y el robot se auto-transformaría en un gusano que le permitiría cruzar la barandilla por debajo y bajar el escalón. Finalmente, se transformaría en un hexápodo, configuración caracterizada por su mayor estabilidad para moverse por el terreno desigual.
+Por tanto, la ventaja de estos nuevos robots modulares auto-configurables es su gran versatilidad.
+Además permiten utilizar la configuración y manera de caminar más eficientes para cada tipo de
+terreno. Es decir, que toman lo mejor de los robots ápodos y de los robots con patas \citep{yim1994locomotion}.
+
+%\newpage
+
+%\section{Manipuladores industriales}
+%Manipulador: mecanismo formado generalmente por elementos en serie, articulados entre sí, destinado al agarre y desplazamiento de objetos. Es multifuncional y puede ser gobernado directamente por un operador humano o mediante dispositivo lógico.
+%\subsection{Tipos de robots industriales}
+%Los robots industriales componen una gran gama de tamaños y configuraciones. La configuración hace referencia a la forma física que le ha sido dada a los brazos. Podemos encontrar las siguientes configuraciones. 
+%\begin{itemize}
+%	\item Robot cartesiano. Este tipo de robot utiliza tres dispositivos deslizantes perpendiculares entre si, para generar movimientos de acuerdo a los tres ejes cartesianos X, Y y Z.
+%	\item Robot cilíndrico. Se basa en una columna vertical que gira sobre la base. También tiene dos dispositivos deslizantes que pueden generar movimientos sobre los ejes Z e Y.
+%	\item Robot esférico o polar. Utiliza un brazo telescópico que puede bascular en torno a un eje horizontal. Este eje telescópico está montado sobre una base giratoria. Las articulaciones proporcionan al robot la capacidad de desplazar el brazo en una zona esférica.
+%	\item Robot de brazo articulado. Se trata de una columna que gira sobre la base. El brazo contiene una articulación, pero sólo puede realizar movimientos en un plano. En el extremo del brazo contiene una eje deslizante que se desplaza en el eje Z. El robot más común de este tipo se conoce como robot SCARA.
+%	\item Robot antropomórfico. Está constituido por dos componentes rectos que simulan el brazo o antebrazo humano, sobre una columna giratoria. Estos antebrazos están conectados mediante articulaciones que se asemejan al hombro y al codo.
+%	\item Poliarticulados. Son robots sedentarios, o sea que no se pueden desplazar, están diseñados para mover sus brazos y herramientas en un determinado espacio de trabajo. En este grupo se encuentran los manipuladores y algunos robots industriales.
+%	\item Móviles. Son robots con gran capacidad de desplazamiento, acoplados a carros o plataformas. Estos robots aseguran el transporte de un sitio a otro de piezas. Están dotados de un cierto grado de inteligencia, lo que les permite sortear obstáculos.
+%	\item Nanorobots. Son pequeños robots capaces de cosas sorprendentes. Existen algunos que viajan por la sangre y son capaces de inyectar la cantidad precisa de droga en una célula. Se trata de robots experimentales.
+%	\item Androides. Son robots que intentan reproducir la forma y los movimientos del ser humano. En la actualidad son poco evolucionados y con poca utilidad práctica.
+%	\item Zoomórficos. Se caracterizan por imitar el sistema de locomoción de algunos seres vivos. Se encuentran el pleno desarrollo se utilizan para desplazarse sobre superficies accidentadas y con numerosos obstáculos. Su aplicación práctica tiene bastante interés en la exploración de otros planetas así como el estudio de volcanes, y entornos de difícil acceso.
+%\end{itemize}  
+
+%\subsection{Control de robots industriales.}
+%Los movimientos de las articulaciones deben ser controlados lleve a cabo la trayectoria deseada. Normalmente se usan microcontroladores para realizar esta acción de control.
+%Típicamente, el controlador se organiza de forma jerárquica, tal como se ilustra en
+%La Fig. \ref{Figura2_01}, de manera que cada articulación puede alimentar de nuevo los datos de control de forma individual, con un controlador de supervisión general encargado de coordinar las actuaciones combinadas de las articulaciones de acuerdo con la secuencia del programa de robot.  
+
+%\begin{figure}[htb]
+%	\centering
+%	\includegraphics[width = 0.9\linewidth]{capitulo_02/imagenes_dir/estructura_control_manipulador.png}
+%	\caption{Estructura de control de un manipulador}
+%	\label{Figura2_01}
+%\end{figure}    
+
+
+\section{Electrónica de control de robots modulares}
+	
+	Los sistemas de robots modulares con auto-reconfiguración y auto-ensamblaje pueden ser algún día capaz de lograr tareas variadas y complejas.  Estos sistemas robóticos tienen el potencial para explotar las capacidades de auto-curación con un suministro de reserva de módulos de robots de bajo coste para una mayor robustez del sistema. Ellos están particularmente bien adaptados a las situaciones en las que deben adaptarse a las tareas que no se conocen a priori, como las aplicaciones de búsqueda y rescate en entornos no estructurados y la exploración planetaria.
+	
+	
+	\subsection{EZ-Robot}
+		Es un empresa canadiense que ofrece una plataforma fácil, innovadora y de gran alcance para construir tus propios robots. Los robots cuentan con características únicas como el reconocimiento de voz, seguimiento de objetos y la reproducción de sonido. Los robots se ensamblan con EZ-bits usando tecnología Clip‘n’Play para conseguir un interminable número de configuraciones utilizando un diseño simple, sin esfuerzo y con ajuste por fricción.
+		
+		EZ-robot es el primero en la industria en proporcionar con éxito un producto robótico completo que combina un hardware potente, modularidad Clip'n'Play  y software innovador. 
+		
+		EZ-Robot cuenta con siete tipos de robots modulares entre los que se encuentra Roli Rover que es un rober de exploración planetaria diseñado para moverse por diferentes superficies, JD es un robot humanoide diseñado para la diversión y la educación. Tiene 16 grados de libertad que la permiten caminar y bailar entre otras cosas. Cuenta con una cámara en la cabeza que permite el seguimiento de objetos, lectura de códigos QR, detección de caras, etc. Estos robots se pueden ver en la Fig. \ref{Figura2_07}
+		
+		\begin{figure}[htbp]
+			\centering
+			\subfigure{\includegraphics[height=60mm]{capitulo_02/imagenes_dir/ez_hum.png}}
+			\subfigure{\includegraphics[height=60mm]{capitulo_02/imagenes_dir/ez_roli.png}}
+			\caption{Robots Roli Rover y JD de la compañía EZ-Robots} \label{Figura2_07}
+		\end{figure}
+		
+		El EZ-B V4 Robot Controller es el módulo de computación, se caracteriza por ser muy compacto y potente con las siguientes características:
+		\begin{itemize}
+			\item Tamaño compacto (5cm x 5cm x 3cm).
+			\item Dos procesadores  de 32 bits (Procesador ARM Cortex-M3 a 120 MHz de 32-bit y un PIC32 a 80 MHz de microchip).
+			\item Conectividad Wi-Fi.
+			\item Servidor web embebido .
+			\item Protección mediante fusibles reseteables y protección contra polaridad invertida.
+			\item Altavoz.
+			\item 8 entradas analógicas tolerantes hasta 5 voltios.
+			\item 24 puertos digitales de 5 voltios (permite combinar PWM y Dynamixel).
+			\item 3 puertos I$^2$C .
+			\item Un puerto para la cámara de vídeo ezrobot.
+			\item 3 puertos UARTS de alta velocidad.
+			\item Monitorización de voltaje y temperatura.			
+		\end{itemize}
+		
+		EZ-Robot cuenta con una parte de DIY donde se pueden encontrar los archivos para realizar la impresión en 3D de algunas de las piezas de los robots.
+		
+		EZ-Robot se puede programar de una forma visual a través de EZ-Builder Robot Control Software donde se pueden realizar de sensores, servos, pantallas y botones para controlar el robot desde el PC. EZ-robot introduce EZ-SDK, un nuevo concepto de robótica personal que aprovecha el poder del PC, permite usar Visual Studio .Net C\# o Visual Basic para controlar el hardware. Los programas en .Net se comunicarán con el controlador del robot EZ-B mediante una conexión Wi-Fi desde el PC o dispositivo móvil \citep{ezrobot}.
+		
+	\subsection{Abilix}
+		Empresa china que vende kits de robótica principalmente destinados a la educación STEM. El kit básico incluye una variedad de actuadores, sensores y dispositivos de salida que son fácilmente conectados en el microcontrolador principal. La programación se realiza a través de una interfaz gráfica. 
+		
+		Para la construcción del robot no es necesario usar tornillos. Con una amplia variedad de piezas estructurales, conectores, engranajes y sensores, ABILIX hace que sea fácil de ensamblar para los estudiantes.
+		
+		\begin{figure}[htbp]
+			\centering
+			\subfigure{\includegraphics[height=50mm]{capitulo_02/imagenes_dir/abilix_controller.png}}
+			\subfigure{\includegraphics[height=50mm]{capitulo_02/imagenes_dir/abilix_hex.png}}
+			\caption{Controlador del kit Abilix y montaje del un robot hexápodo} \label{Figura2_08}
+		\end{figure}
+		
+		Los modelos sofisticados tienen un nivel de precisión de ± 0,02 mm y son fáciles de montar y desmontar. Después de probar la durabilidad de conexión y desconexión de los bloques se observa que es mayor a las 10.000 veces. 
+		
+		El controlador del kit cuenta con cuatro puertos para el control de motores, pantalla LCD, altavoz, batería 
+	
+	\subsection{M-BLOCK}
+		M-Block es un robot modular formado por cubos de 50 mm de lado con aristas magnéticas e impulsado mediante momento angular (angular momentum-actuated). Cada cubo es un robot autónomo que no tiene partes móviles externas. Un volante de inercia en su interior de cada módulo es usado para almacenar momento angular antes de que un mecanismo de frenado provoque una desaceleración del volante de inercia y durante un corto periodo de tiempo se produzca alto par en el módulo. Si el par es suficientemente alto, el módulo rompe su atracción magnética con su módulo vecino y pivota a una nueva posición \citep{romanishin2013m}.
+		    
+		
+		\begin{figure}[htbp]
+			\centering
+			\subfigure[Módulo M-Block]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/m_block.png}}
+			\subfigure[Imanes de M-Block]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/m_block_2.png}}
+			\caption{M-Block} \label{Figura2_02}
+		\end{figure}
+		
+		Cada módulo pesa 143 g y cuanta con 24 imanes como se puede ver en la Fig. \ref{Figura2_02}, las caras con placas PCB donde se encuentran los componentes electrónicos entre los que se incluyen:
+		\begin{itemize}
+			\item Procesador ARM 32-bit.
+			\item Comunicación radio XBee.
+			\item Tres baterías LiPo de 3.7 V y 125 mAh conectadas en serie
+			\item IMU de 6 ejes para la determinación de la orientación.
+			\item Comunicación con el vecino a través de led IR/fotodiodo. 
+			\item Varios sensores de efecto hall para detectar la unión con otros módulos
+		\end{itemize}
+		
+	\subsection{LEGO Mindstorms}
+	La plataforma LEGO MINDSTORMS es un juego de robótica desarrollado por la compañía LEGO en colaboración con   el MIT (Massachusetts Institute of Technology). El kit básico proporciona los elementos básicos (sensores, servos y partes mecánicas) para construir robots sencillos. 
+	
+	Las características del controlador, bloque NXT o brick son:
+	\begin{itemize}
+		\item Microprocesador Atmel ARM7 de 32 bits a 48 MHz. La   plataforma también  cuenta   con   un coprocesador, Atmel AVR de 8 bits, y con una memoria Flash de 256 KB y una	memoria RAM de 64 KB.
+		\item Comunicación inalámbrica mediante Bluetooth y comunicación por cable usando tecnología USB soportando tasas de	trasferencia de datos de hasta 2.1 y 12 Mbits/s respectivamente.
+		\item 4 puertos de entrada con conexión RJ12 (conector telefónico de 6 hilos),	que permiten conectar sensores tanto digitales como analógicos y 3 puertos de salida	RJ12 utilizadas para conectar diferentes tipos de actuadores.
+		\item Pantalla LCD gráfica y altavoz.
+	\end{itemize}
+	
+	%El controlador, bloque NXT o brick, contiene una CPU con capacidad de	ejecutar   programas   de  diferente   complejidad.  Cuenta   con   un	microprocesador Atmel ARM7 de 32 bits a 48 MHz. La   plataforma también  cuenta   con   un coprocesador, Atmel AVR de 8 bits, y con una memoria Flash de 256 KB y una	memoria RAM de 64 KB. El controlador soporta	tanto   comunicaciones   inalámbricas   con   Bluetooth   (especificación   v2.0   EDR)   como	comunicación por cable usando tecnología USB (estándar 2.0) que soportan tasas de	trasferencia de datos de hasta 2.1 y 12 Mbits/s respectivamente. El bloque NXT cuenta	también con 4 puertos de entrada con conexión RJ12 (conector telefónico de 6 hilos),	que permiten conectar sensores tanto digitales como analógicos y 3 puertos de salida	RJ12   que   se   utilizan   para   conectar   diferentes   tipos   de   actuadores,   normalmente	servomotores. Además, el controlador cuenta con una pantalla LCD gráfica de 100x64	pixeles que se puede utilizar en modo gráfico para dibujar figuras, un altavoz con un	canal de sonido con 8 bits de resolución capaz de generar tonos en el rango de 2 a 16	KHz y 4 botones que permiten interactuar con el bloque NXT.
+	
+		Existe una pila de software llamada NXT-ROS que ofrece muchas herramientas útiles para interactuar con el robot y ROS. Actualmente, los usuarios de NXT pueden tomar modelos de robots creados con Lego Digital Designer, y automáticamente convertirlos en modelos de robots compatibles con ROS. El modelo de robot convertido puede ser visualizado en RViz, y en el futuro se espera que se pueda simular en Gazebo. El puente entre NXT y ROS crea un tópico de ROS para cada motor y cada sensor del robot NXT.
+		
+		Una vez que un robot está conectado a ROS, se puede iniciar aplicaciones tales como el controlador la base, odometría de las rueda, teleoperación a partir del teclado/joystick, e incluso teleoperación utilizando la pila de navegación ROS. La pila de software NXT-ROS incluye una serie de modelos de robots de ejemplo para que los usuarios puedan tener una idea de usar NXT con ROS.
+		
+	\subsection{M-TRAN III}
+		M-TRAM (Modular Transformer) es un robot modular auto-reconfigurable cuyos módulos constan de dos cubos semi-cilíndricos. M-TRAN ha sido desarrollado en Japón por AIST y Tokyo-Tech desde 1998. Cada módulo tiene dos grados de libertad y cada una de las las seis caras planas del módulo se pueden conectar con otro módulo \citep{kurokawa2008distributed}.
+		
+		M-TRAN cuenta con la ventaja de que es capaz de realizar los dos tipos de robots modulares, tipo celosía (lattice) y tipo cadena cuando todas las articulaciones son controladas sincrónicamente. M-TRAN tiene su propio controlador e inteligencia, esto permite que todos los módulos trabajen cooperativamente para la formación de un sistema autónomo distribuido. En la Fig. \ref{Figura2_03} se puede ver un módulo del M-TRAN III junto con una imagen donde el robot cambia de forma.
+		
+		\begin{figure}[htbp]
+			\centering
+			\subfigure[Módulo M-TRAN III]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/mtran_modulo.png}}
+			\subfigure[Metamorfosis del M-TRAN III]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/metamorfisis_mtran.png}}
+			\caption{M-TRAN III} \label{Figura2_03}
+		\end{figure}
+		
+		Cada módulo mide 65 x 65 x 130 mm y pesa 420 g, el interior de módulo cuenta los siguientes componentes electrónicos:
+		\begin{itemize}
+			\item Un procesador principal y tres secundarios dentro de cada módulo, el principal es un HD64F7047 de 32 bits de la compañía Renesus y los secundarios son un HD64F3687 de 16 bits y dos HD64F3694 también de la compañía Renesus.
+			\item 10 transmisores infrarrojos repartidos por las caras del módulo usados para la comunicación entre módulos cercanos, sobre todo cuando los módulos están separados en grupos. Los dispositivos infrarrojos son también usados como sensores de proximidad.
+			\item Sensor de aceleración de tres ejes destinado a la medición de la orientación de los módulos.
+			\item Comunicación entre los módulos ensamblados a través de CAN bus, este tipo de comunicación global es más sencilla que la comunicación vecino-vecino.
+			\item Bluetooth para la comunicación con otros módulos o un PC.
+			\item Batería Li-Po de 7.4 V y 730 mAh en cada módulo
+		\end{itemize}
+		
+	\subsection{SMORES}
+		El diseño de este sistema llamado SMORES (Self-assembling MOdular Robot for Extreme Shapeshifting) es capaz de reordenar sus módulos en las tres clases de reconfiguración; estilo de celosía, estilo de la cadena y reconfiguración móvil. Los módulos son independientemente móviles y son capaces de auto-ensamblaje de un conjunto de módulos desconectados \citep{davey2012emulating}.
+		
+		Cada módulo cuenta con cuatro grados de libertad como se observa en la Fig. \ref{Figura2_04}, los grados de libertad \#1, \#2 y \#4 son paralelos y coincidentes, el grado de libertad \#3 es perpendicular a los anteriores.  Cada módulo tiene tres grados de libertad con continuos (no tienen ángulo límite de rotación) y uno (\#4) limitado a $\pm 90 \deg$.
+		
+		\begin{figure}[htbp]
+			\centering
+			\subfigure[Grados de libertad de un módulo Smores]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/dof_smores.png}}
+			\subfigure[Vista de dos módulos Smores]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/smores_modulos.png}}
+			\caption{SMORES} \label{Figura2_04}
+		\end{figure}
+		
+		Cada módulo cuenta con una batería independiente y la comunicación se lleva a cabo de forma inalámbrica por lo que el anclaje entre módulos solo necesita preocuparse por la fijación mecánica. Los componentes electrónicos de cada módulo son los siguientes:
+		\begin{itemize}
+			\item Microcontrolador MBED basado en el NXP LPC1768, con nucleo ARM Cortex-M3 de 32 bits corriendo a una frecuencia de 96MHz
+			\item Tres drivers para motores TB6612FNG controlados con PWM generada por el MBED.
+			\item Posición angular de los motores medida a través de potenciómetros de rotación continua.
+			\item La comunicación inalámbrica entre módulos y el control central es logrado con transmisores/receptores de radio X-Bee.
+		\end{itemize}
+		
+	\subsection{ATRON}
+		ATRON es un prototipo de robot auto-configurable basado en módulos homogéneos desarrollado por investigadores del Maersk Institute de Dinamarca. ATRON usa la configuración de celosía. Los módulos tienen forma de esfera de 11 cm de diámetro donde cada módulo tiene un grado de libertad que divide la esfera en dos semiesferas \citep{jorgensen2004modular}.
+		
+		La unión entre módulos se produce mediante conectores hembra/macho, donde cada módulo se puede conectar a uno o dos módulos. En la Fig. \ref{Figura2_05} se puede ver un módulo ATRON y varios módulos formando una celosía.
+		
+		\begin{figure}[htbp]
+			\centering
+			\subfigure[Módulo ATRON]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/atron_modulo.png}}
+			\subfigure[Celosía formada por módulos ATRON]{\includegraphics[height=35mm]{capitulo_02/imagenes_dir/atron_celosia.png}}
+			\caption{ATRON} \label{Figura2_05}
+		\end{figure}
+		La electrónica de los módulos ATRON está muy influida por el hecho de estñas dividido en dos hemisferios independientes.
+		\begin{itemize}
+			\item Cada modulo es autónomo y está equipado con dos baterías LiPo de 3,6 V 980mAh situadas en una de las semiesferas. Sin embargo las simulaciones y la reconfiguración de cientos de módulos muestra que los módulos situados en el centro del organismo tienden a moverse menos, módulos en la superficie tiene más movimiento por lo que consumen más energía, para solucionar esto, se da a cada módulo la capacidad de compartir energía con los módulos conectados entre sí.
+			\item Cada hemisferio tiene un ATMega128 como microcontrolador principal con una memoria de RAM de 4Kb y 4Kb de EEPROM para almacenamiento, estos microcontroladores funcionan a 16MHz y es el responsable de la comunicación de ambos hemisferios.
+			\item En uno de los hemisferios hay un microcontrolador  ATMega8 a 1Mhz usado como procesador de entrada/salida, se encarga de leer el acelerómetro y monitorizar y actuar sobre la rotación del módulo. También es el encargado de conectar y desconectar de los módulos vecinos.
+			\item La comunicación con los vecinos cada esfera cuenta con cuatro diodos infrarrojos para transmitir y cuatro para recibir información de los vecinos. 
+			\item Cada módulo cuenta con un acelerómetro de dos ejes y puede usar los infrarrojos de comunicación como sensores de proximidad.
+		\end{itemize}
+		
+	\subsection{SAMBOT}
+		El Sambot es un sistema multirobot que ha sintetizado las ventajas de los robots auto-reconfigurables y auto-ensamblables. Cada módulo es un robot móvil completamente autónomo ya que cuenta con ruedas y tiene unas dimensiones de 80 x 80 x 102 mm. El auto-ensamblaje de varios Sambots puede formar una estructura robótica, como una estructura en forma de serpiente o en forma de cuadrúpedo \citep{wei2011sambot}. En la Fig. \ref{Figura2_06} se pueden ver las distintas partes de un módulo.
+		
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[width = 0.6\linewidth]{capitulo_02/imagenes_dir/sambot_modulo.jpg}
+			\caption{Módulo Sambot}
+			\label{Figura2_06}
+		\end{figure} 
+		
+		El sistema de electrónica puede ser dividido en tres partes:
+		\begin{itemize}
+			\item Unidad de control principal: usa un microprocesador STM32 de la serie ARM, se encarga del movimiento del robot y de otras tareas de alto nivel. Esta unidad puede recibir información del giróscopo y acelerómetro. La información del encoder es recibida a través de I2C, también recibe información de los otros robots a trabes de la unidad de comunicación global permitiendo tomar decisiones  que cambien el comportamiento global. 
+			\item Unidad de sensores y actuadores: cada módulo tiene cuatro motores para controlar las dos ruedas y el mecanismo de acoplamiento, cada uno de ellos es controlado de forma separada por un microcontrolador ATMega8 que a la vez recibe información del encoder y lo envía al STM32 a través de I2C.
+			\item Unidad de comunicación: la comunicación del Sambot está dividida en dos partes: comunicación inalámbrica ZigBee cuando los módulos están en estado de enjambre y comunicación CAN bus cuando están en el estado de estructura robótica, ambas comunicaciones son controladas por el STM32.
+		\end{itemize}
+		
+		
+\section{Sistemas de control}
+	
+	Un middleware es un software que asiste a una aplicación para interactuar o comunicarse con otras aplicaciones, o paquetes de programas, redes, hardware y/o sistemas operativos. Funciona como una capa de abstracción que consiste en un software distribuido situado entre las capas de aplicaciones y las capas inferiores. El middleware abstrae la complejidad y heterogeneidad de las redes de comunicaciones subyacentes, así como de los sistemas operativos y lenguajes de programación, proporcionando una API\footnote{Application Programming Interface} para la programación y manejo de las aplicaciones distribuidas.
+
+	\subsection{ROCK}
+	
+		Rock\footnote{the Robot Construction Kit} es un \textit{framework} para el desarrollo de sistemas robóticos. Se basa en Orocos RTT (Real Time Toolkit). Rock proporciona todas las herramientas necesarias para configurar y ejecutar sistemas robóticos fiables y de alto rendimiento para una amplia variedad de aplicaciones en la investigación y la industria. Contiene una rica colección de  controladores listos para usar que se puede extender fácilmente mediante la adición de nuevos componentes. El \textit{framework} fue desarrollado para atender específicamente las siguientes cuestiones:
+		
+		\begin{itemize}
+			\item Sistemas sostenibles: la arquitectura y las herramientas de Rock están diseñados para tener una larga vida útil. 
+			\item 	Escalabilidad: proporcionar las herramientas para poder manejar grandes sistemas con un mínimo esfuerzo.	
+			\item Código reutilizable: la mayor parte de la funcionalidad, desde el control hasta la monitorización de los datos a través del procesamiento de datos, se implementa de una manera que es totalmente independiente del \textit{framework} Rock.
+		\end{itemize}
+		
+		Rock usa MARS\footnote{Machina Arte Robotum simulans} como simulador, es una herramienta  multiplataforma de simulación y visualización creada para la investigación robótica. Se ejecuta en (Ubuntu) Linux, Mac y Windows y consiste en un \textit{framework} que contiene todos los componentes principales de simulación, una interfaz gráfica de usuario (basado en Qt), visualización en 3D (utilizando OSG\footnote{Open Scene Graph}) y un motor de físicas (basado en ODE).
+		MARS está diseñado de una manera modular y se puede utilizar de forma muy flexible, por ejemplo, mediante la ejecución de la simulación física sin la visualización. Es posible extender MARS a través de plugins.
+	
+	\subsection{\textit{Microsoft Robotics Developer Studio}}
+		\textit{Microsoft Robotics Studio} (Microsoft RDS, MRDS ) es un entorno para el control y simulación de robots basado en Windows. Está dirigido a investigadores, aficionados y desarrollos comerciales permitiendo el manejo de hardware del robot. Se requiere el Microsoft Windows como sistema operativo.
+		
+		RDS se basa en el CCR (Concurrency and Coordination Runtime) que es una librería concurrente basada en .NET para la gestión de tareas paralelas asíncronas. Esta técnica implica el uso de paso de mensajes y el uso de servicios, DSS (Decentralized Software Services), que permite la ejecución de múltiples servicios para lograr comportamientos complejos.
+		
+		Las características incluyen son:
+		% una herramienta de programación visual,  Microsoft Visual Programming Language creado para depurar aplicaciones robóticas, basada en la web y las interfaces con sistema operativo Windows, simulación 3D (incluyendo la aceleración por hardware), fácil acceso a los sensores y actuadores del robot. El lenguaje de programación principal es C\#.
+		\begin{itemize}
+			\item Plataforma de desarrollo robótica extremo-a-extremo: herramienta de programación visual para crear y depurar aplicaciones robóticas. El desarrollador puede interactuar con los robots mediante interfaces basadas en web o en Windows.
+			
+			\item Simulación 3-D: la simulación realista está provista por el motor PhysX de AGEIA. Se posibilita la emulación por software o la aceleración por hardware.
+			
+			\item Entorno de ejecución ligero orientado a servicios: el desarrollador puede acceder fácilmente a los sensores y actuadores de los robots, proporcionada por una librería de implementación de concurrencia basada en .NET. La comunicación estás basada en mensajes, permitiendo la comunicación entre módulos.
+			
+			\item Plataforma escalable y extensible: se permiten varios lenguajes de Microsoft como Microsoft Visual Studio Express languages (Visual C\# y Visual Basic .NET), JScript y IronPython 1.0 Beta 1, y lenguajes de terceras partes que se adecuen a la arquitectura basada en servicios.
+		\end{itemize}
+	
+	
+	\subsection{OpenRTM-aist}
+		OpenRTM-AIST es una plataforma de software desarrollado sobre la base de estándar RT-middleware de código abierto que proporciona capacidades en tiempo real. OpenRTM-AIST es desarrollado por el Instituto Nacional de Ciencia Industrial Avanzada y Tecnología de Japón, que también contribuye a la definición del estándar RT-middleware.
+		
+		En RT-middleware , todos los elementos robóticos, tales como actuadores y sensores, son considerados como RT-componentes (RTC). Cada RTC proporciona puertos para comunicarse con otros RTC, y los desarrolladores pueden implementar sus propios sistemas robóticos (RT) como los RTCs. RT-middleware por lo tanto puede ser considerado como una arquitectura de control distribuida.
+		
+		RT-middleware es originalmente un modelo independiente de la plataforma (PIM). Las implementaciones de este modelo incluyen CORBA , Enterprise JavaBean (EJB), y .NET Framework. OpenRTM-AIST se basa en CORBA e implementa las especificaciones de RTC. 
+	
+		OpenRTM-AIST incluye un componente para ayudar a la manipulación de los RTCs. Los RTCs en OpenRTM-AIST pueden implementarse utilizando muchos lenguajes de programación como C++, Java  o Python, y los RTCs programados en diferentes lenguajes pueden comunicarse entre sí. El Instituto Nacional de Ciencia Industrial Avanzada y Tecnología ha liberado una gran cantidad de herramientas para facilitar las manipulaciones de los RTC.
+		
+		Algunas herramientas disponibles de OpenRTM-AIST son:
+		
+		\begin{itemize}
+			\item RTC Builder: una herramienta para la generación de código. Se puso en marcha en el entorno de desarrollo Eclipse.
+			\item RT System Editor: un conjunto de herramientas basadas en Eclipse para el diseño de componentes y sistemas basados en componentes.
+			\item RTshell es una herramienta de línea de comandos que proporciona distintos servicios.
+			\item RTC debugger: una herramienta de depuración para los RTCs. RTC debugger es un plug-in de Eclipse.
+		\end{itemize}
+		
+	\subsection{Orca}	
+		Orca es un \textit{framework} de código abierto para el desarrollo de sistemas robóticos basados en componentes. Proporciona los medios para definir y desarrollar los bloques, que se combinan entre ellos para formar sistemas robóticos arbitrariamente complejos, desde vehículos individuales a las redes de sensores distribuidas.
+		
+%	\subsection{Yarp}
+%		YARP significa  Yet Another Robot Platform. ¿Qué es? Si los datos es la corriente sanguínea de su robot, entonces YARP es el sistema circulatorio.
+		
+%		Más específicamente, YARP apoya la construcción de un sistema de control para un robot como una colección de programas que se comunican de un modo peer-to-peer, con una familia extensible de tipos de conexión (TCP, UDP, multidifusión local MPI, MJPG sobre HTTP, XML/RPC, tcpros, ...) que se pueden enchufar y desenchufar para que coincida con sus necesidades. También apoyamos interfaz parecida flexible con los dispositivos de hardware. Nuestro objetivo estratégico es aumentar la longevidad de los proyectos de software del robot.
+		
+%		YARP es no un sistema operativo para su robot. Nos damos cuenta de que ya tiene un sistema operativo, o tal vez varios. Tampoco es lo que hace la gestión de paquetes (nos gustan los gestores de paquetes que tenemos). No estamos fuera de la dominación del mundo. YARP está escrito en C ++. YARP es libre y abierto, bajo la LGPL.
+		
+		
+	\subsection{ROS}
+	
+		ROS\footnote{Robot Operating System} es una colección de \textit{framework} para el desarrollo de software robótico que proporciona la funcionalidad de un sistema operativo en un heterogéneo grupo de máquinas. ROS proporciona servicios típicos del sistema operativo, tales como la abstracción de hardware, control de dispositivos a bajo nivel, paso de mensajes entre procesos y gestión de paquetes. Conjuntos de procesos en ejecución basados en ROS están representados en una arquitectura de grafos donde el procesamiento se lleva a cabo en los nodos que pueden recibir, publicar y multiplexar mensajes de sensores, control, estado, planificación, actuadores, etc. A pesar de la importancia de la baja latencia en el control de robots, ROS, en sí, no es un sistema operativo en tiempo real, a pesar de que es posible la integración de ROS con código de tiempo real.
+		
+		El software del ecosistema ROS se puede separar en tres grupos:
+		
+		\begin{itemize}
+			\item Herramientas independientes del lenguaje y de la plataforma usadas para la construcción y distribución de software basado en ROS.
+			\item Implementaciones de librerías de cliente como roscpp, rospy y roslisp.
+			\item Los paquetes que contienen el código relacionado con la aplicación que utiliza una o más librerías de cliente de ROS.			
+		\end{itemize}
+		
+		Los paquetes que forman tanto las herramientas independientes del lenguaje como las librerías de cliente (C ++, Python, LISP) son liberadas bajo los términos de la licencia BSD\footnote{Berkeley Software Distribution}, y como tales son un software de código abierto y libre tanto para uso comercial como para uso de investigación. La mayoría de los otros paquetes tienen una variedad de licencias de código abierto. Estos otros paquetes implementan funcionalidades y aplicaciones tales como controladores de hardware, los modelos de robots, tipos de datos, la planificación, la percepción, herramientas de simulación y otros algoritmos.	
+		
+		Las principales librerías de cliente de ROS (C ++, Python, LISP) están orientados hacia un sistema Unix, sobre todo debido a su dependencia de las grandes colecciones de software de código abierto. Por eso para estas librerías de cliente, Ubuntu Linux aparece como ``compatible'', mientras que otras variantes como Fedora Linux, Mac OS X y Microsoft Windows son designados ``experimental'' y son apoyados por la comunidad. La librería de cliente ROS en Java, rosjava, sin embargo, no comparte estas limitaciones y ha permitido que software basado en ROS pueda ser escrito para el sistema operativo Android. Rosjava también ha permitido que ROS sea integrado en una toolbox de MATLAB que se pueden utilizar en Linux, Mac OS X y Microsoft Windows. Una librería de cliente ha sido también se ha desarrollado en JavaScript, roslibjs, que permite la integración de software en un sistema de ROS a través de cualquier navegador web compatible con los estándares.
+		
+		
+		Las principales características que han hecho que sea ROS elegido para el desarrollo del proyecto son las siguientes:
+		
+		\begin{itemize}
+			\item Comunicación \textit{peer-to-peer}: los nodos de ROS se comunican empleando TCP/IP tanto para el control de procesos como para enviar señales a los actuadores y rescibir de sensores. Esto permite que ejecutando un master se puedan ejecutar diferentes procesos en diferentes máquinas a través de un red de comunicación.
+			\item Gratuito y de código abierto: al ser una plataforma de código abierto permite la reutilización de funcionalidades introducidas por otros usuarios de ROS. Otra gente a desarrollado funcionalidades para robots que pueden ser relativamente fáciles de añadir usando ROS.
+			\item Bajo tamaño: los desarrolladores de ROS han conseguido que los driver y algoritmos estén contenidos en ejecutables independientes, esto permite la reusabilidad del código y sobre todo mantener un bajo tamaño. %Este método permite que toda la complejidad se encuentre en las librerías y que ROS sea sencillo de utilizar. Esto también facilita el testeo del código.
+			\item Multi-lenguaje: ROS puede ser programado en varios lenguajes ya que trabaja en la capa de mensaje. Las comunicaciones \textit{peer-to-peer} son manejadas por XML-RPC, que se encuentra disponible en un gran número de lenguajes. Esto permite que el control de hardware a bajo nivel pueda ser escrito en C debido a la velocidad mientras que aplicaciones de alto nivel puedan se escritos en Python.
+			\item Modularidad: puesto que las comunicaciones se realizan por un sistema de mensajes distribuido, si un componente falla el sistema completo no falla.
+			\item Manejo de recursos compartidos:  Sin ROS, la lectura/escritura de los recursos rápidamente se convierte en un lío con los grandes sistemas multi-hilo. ROS simplifica todo el proceso, asegurando que sus hilos no están realmente tratando de leer y escribir a los recursos compartidos, son más bien sólo la publicación y la suscripción a los mensajes. 
+		\end{itemize}
+
+	%Actualmente, la mayoría de los desarrollos robóticos se integran con el software de ROS, que es un middleware robótico que funciona en múltiples arquitecturas y sobre el sistema operativo Linux, es software libre bajo licencia BSD y se comunica empleando TCP/IP tanto para el control de operaciones de procesos como para enviar señales a los actuadores.
+	
+	%Hoy en día la robótica juega un papel muy importante en la sociedad y en un futuro próximo será más importante cuando sea capaz de realizar tareas más complejas. La robótica también forma parte de la educación a través de la robótica educativa como un método de aprendizaje que permite desarrollar las capacidades creativas y de organización, fomentar el trabajo en grupo, promover la necesidad de experimentar y de descubrir nuevas habilidades, el interés por investigar \dots Estos son algunos de los objetivos de la robótica educativa.
+	
+	%La plataforma ROS se vuelve muy atractiva para este tipo de proyectos ya que es multilenguaje, es software libre bajo licencia BSD, incluye un alto nivel de abstracción para acceder a hardware externo, tales como sensores y actuadores. Debido a la implementación modular de ROS, funcionalidades adicionales se pueden incorporar fácilmente a la plataforma. 
+
+		
+	\section{Simuladores}
+	
+		Un simulador de la robótica se utiliza para crear aplicaciones integradas para un robot sin depender físicamente de la máquina real, con el consiguiente ahorro de costes y tiempo. En algunos casos, estas aplicaciones se pueden transferir al robot real (o reconstruidas) sin modificaciones.
+		
+		\subsection{Gazebo}
+			Gazebo puede simular sistemas complejos y una variedad de sensores. Se utiliza especialmente en el desarrollo de robots utilizados en la interacción con objetos, para levantar o agarrar objetos, para empujar, o cualquier otra actividad que requiere el reconocimiento y la localización en el espacio. Se trata de una plataforma de software de código abierto para el que cualquier persona puede desarrollar un plug-in con los componentes del modelo, también compatible con ROS y Player. Gazebo se ejecuta en Linux, existen versiones portadas para Mac y  también está disponibles para Windows \citep{Gazebo_2016-06-13}.
+			
+			\begin{figure}[htb]
+				\centering
+				\includegraphics[width = 0.5\linewidth]{capitulo_02/imagenes_dir/simuladores/gaz.png}
+				\caption{Simulador Gazebo}
+				\label{Figura2_09}
+			\end{figure} 
+			
+		\subsection{Webots}
+			Webots ha sido creado por la empresa suiza Cyberbotics. Cuenta con una interfaz amigable y compatible con lenguajes como C/C ++, Java, Python, URBI, MATLAB y puede interactuar con software de terceros a través de TCP/IP. Es una de las plataformas de simulación más comunes con una larga lista de componentes que pueden ser utilizados en la simulación y la posibilidad de añadir otros componentes. El software es multiplataforma \citep{Webots:_robot_simulator_2016-06-13}.
+			
+			\begin{figure}[htb]
+				\centering
+				\includegraphics[width = 0.5\linewidth]{capitulo_02/imagenes_dir/simuladores/weebots.png}
+				\caption{Simulador Webots}
+				\label{Figura2_10}
+			\end{figure} 
+			
+		\subsection{V-REP}
+			V-REP es un simulador 3D compatible con Windows, Mac y Linux y está disponible con una licencia educacional libre o con una licencia pagada para fines comerciales.
+			
+			El software permite el modelado de un sistema entero o solamente ciertos componentes como sensores, mecanismos de engranaje, y así sucesivamente. El programa de control de un componente puede estar unido al objeto o a la escena con objetos para modelar de una manera similar a la realidad. La plataforma se puede utilizar para controlar la parte de hardware, desarrollo de algoritmos, crear simulaciones de automatización de fábricas, o para demostraciones educativas \citep{Coppelia_Robotics_v-rep:_Create._Compose._Simulate._Any_Robot_2016-06-13}.
+			
+			\begin{figure}[htb]
+				\centering
+				\includegraphics[width = 0.5\linewidth]{capitulo_02/imagenes_dir/simuladores/v-rep.png}
+				\caption{Simulador V-REP}
+				\label{Figura2_11}
+			\end{figure} 
+			
+		\subsection{Morse}
+			Morse es un simulador genérico para la robótica académica. Se centra en la simulación 3D realista de pequeños a grandes entornos, interiores o exteriores , con uno de décimas de robots autónomos.
+			
+			MORSE se puede controlar por completo de la línea de comandos. Las escenas de la simulación se generan a partir de scripts simples de Python.
+			
+			MORSE viene con un conjunto de sensores estándar (cámaras, escáner láser, GPS, odometría, ...), actuadores (controladores de velocidad, controladores de waypoints de alto nivel, controladores de conjuntos genéricos) y bases robóticos (quadrotors, ATRV, Pioneer3DX, 4 genérica ruedas de vehículos, PR2, ...).
+			
+			La renderización de MORSE se basa en el Blender Game Engine, este motor está basado en OpenGL y soporta sombreado, ofrece opciones avanzadas de iluminación, es compatible con múltiples texturas, y utiliza la librería \textit{Bullet} para la simulación de físicas. \citep{morse_-_Openrobots_2016-06-13}.
+			
+			\begin{figure}[htb]
+				\centering
+				\includegraphics[width = 0.5\linewidth]{capitulo_02/imagenes_dir/simuladores/morse.png}
+				\caption{Simulador MORSE}
+				\label{Figura2_12}
+			\end{figure} 
+			
+	
+	Se ha elegido Gazebo como simulador debido a:
+	\begin{itemize}
+		\item Admite URDF para la descripción de los robots.
+		\item Es compatible con ROS.
+		\item Es gratuito, de código abierto, y se encuentra disponible para Linux.
+	\end{itemize} 

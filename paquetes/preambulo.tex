@@ -1,0 +1,197 @@
+\documentclass[10.5pt,oneside,titlepage,openright,onecolumn,a4paper]{book}
+  \setlength{\oddsidemargin}{0.75cm}    % Margen en paginas impares.
+  \setlength{\evensidemargin}{-0.4cm}   % Margen en paginas impares.
+  \setlength{\textwidth}{15.5cm}        % Anchura del texto.
+  \setlength{\textheight}{20.5cm}     	% Longitud del texto.
+  \setlength{\topmargin}{0cm}
+  \setlength{\headheight}{0cm}        	% Altura del encabezado.
+  \setlength{\headsep}{2.3cm}           % Espacio entre encabezado y texto.
+
+% IDIOMA ESPAÑOL Y TILDES Y EÑES
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{longtable}
+
+\usepackage{xcolor}
+\usepackage{textcomp}
+
+% Para usar courier en los códigos
+\usepackage{courier}
+
+% Definicion general para el código en todos los lenguajes
+\lstset{
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
+
+% Definición de colotes
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkblue}{rgb}{0,0.5,0}
+
+% Estilo para Python
+\newcommand\pythonstyle{\lstset{
+		language=Python,
+		%basicstyle=\ttm,
+		otherkeywords={self},             % Add keywords here
+		%keywordstyle=\ttb\color{deepblue},
+		keywordstyle=\color{deepblue},
+		emph={MyClass,__init__},          % Custom highlighting
+		%emphstyle=\ttb\color{deepred},    % Custom highlighting style
+		emphstyle=\color{deepred}, 
+		stringstyle=\color{deepgreen},
+		frame=tb,                         % Any extra options here
+		showstringspaces=false            % 
+}}
+	
+	
+% Comando para introducir código de Python
+\lstnewenvironment{python}[1][]
+{
+	\pythonstyle
+	\lstset{#1}
+}
+{}
+	
+% Python: archivos externos
+\newcommand\pythonexternal[2][]{{
+		\pythonstyle
+		\lstinputlisting[#1]{#2}}}
+	
+% Python inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+
+% Estilo XML
+\lstset{
+	language=xml,
+	tabsize=3,
+	%frame=lines,
+	caption=Test,
+	label=code:sample,
+	%frame=shadowbox,
+	rulesepcolor=\color{gray},
+	xleftmargin=20pt,
+	framexleftmargin=15pt,
+	keywordstyle=\color{blue}, %\bf,
+	commentstyle=\color{darkblue},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	emph={food,name,price},emphstyle={\color{magenta}}}
+
+
+% NUEVO LENGUAJE: YAML
+\newcommand\YAMLcolonstyle{\color{red}\mdseries\footnotesize\ttfamily}
+\newcommand\YAMLkeystyle{\color{black}\mdseries\footnotesize\ttfamily}
+\newcommand\YAMLvaluestyle{\color{blue}\mdseries\footnotesize\ttfamily}
+
+\makeatletter
+
+% Macro para crear un nuevo lenguaje
+\newcommand\language@yaml{yaml}
+
+\expandafter\expandafter\expandafter\lstdefinelanguage
+\expandafter{\language@yaml}
+{
+	keywords={true,false,null,y,n},
+	keywordstyle=\color{darkgray}\mdseries\footnotesize,
+	basicstyle=\YAMLkeystyle,                                 % Lo primero que hay es un key
+	sensitive=false,
+	comment=[l]{\#},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily\footnotesize,
+	stringstyle=\YAMLvaluestyle\ttfamily\footnotesize,
+	moredelim=[l][\color{orange}]{\&},
+	moredelim=[l][\color{magenta}]{*},
+	moredelim=**[il][\YAMLcolonstyle{:}\YAMLvaluestyle]{:},   % Canbiar al estilo  YAMLvaluestyle cuando haya dos puntos (:)
+	morestring=[b]',
+	morestring=[b]",
+	literate =    {---}{{\ProcessThreeDashes}}3
+	{>}{{\textcolor{red}\textgreater}}1     
+	{|}{{\textcolor{red}\textbar}}1 
+	{\ -\ }{{\mdseries\ -\ }}3,
+}
+
+% Cambiar al estilo key cunado hay nueva linea
+\lst@AddToHook{EveryLine}{\ifx\lst@language\language@yaml\YAMLkeystyle\fi}
+\makeatother
+
+\newcommand\ProcessThreeDashes{\llap{\color{cyan}\mdseries-{-}-}}
+
+\usepackage{mathtools}
+
+% Renombrar el caption de los códigos y el nombre que aparece en el índice
+\renewcommand{\lstlistingname}{Código}% Listing -> Codigo
+\renewcommand{\lstlistlistingname}{Índice de \lstlistingname s}% List of Listings -> Indice de codigo
+
+
+% Nuevos comandos para añadir código obligando a no cambiar de página desde archivo
+\newenvironment{filecode}[1][]
+{\minipage{\linewidth}% \begin{filecode}[#1]
+	\lstset{basicstyle=\ttfamily\footnotesize,frame=single,#1}}
+{\endminipage}% \end{filecode}
+% Nuevos comandos para añadir código obligando a no cambiar de página introduciendo de forma inline
+\lstnewenvironment{code}[1][]%
+{\noindent\minipage{\linewidth}\medskip 
+	\lstset{#1}}
+{\endminipage}
+
+% Paquete para forzar que un comando se ejecute en la página siguiente.
+\usepackage{afterpage}
+
+\usepackage{changepage}
+\usepackage{tikz}
+
+%Nuevo comando para añadir un A3 en cualquier parte del documento
+\newenvironment{hugepage}%
+{\newpage \clearpage  % Cambiar a A3: 297mm x 420mm
+	\pagestyle{empty}  % Quitar numero de página, encabezado, ...
+	\setlength\paperwidth{420mm} %A3
+	\setlength\paperheight{297mm} %A3
+	\setlength\pdfpagewidth\paperwidth
+	\setlength\pdfpageheight\paperheight}
+{\addtocounter{page}{-1} % Decrementar contadir en 1
+	\clearpage
+	\setlength\paperwidth{297mm} %A3
+	\setlength\paperheight{210mm} %A3
+	\setlength\pdfpagewidth\paperwidth
+	\setlength\pdfpageheight\paperheight
+	
+} % Volver a A4
+
+% Paquete para añadir notas
+\usepackage[author={Gustavo Plaza}]{pdfcomment}
+% Paquete de hipervinculos
+\usepackage{hyperref}
+\usepackage{url}
+
+% Paquete que incluye macros (usado en la frase de los agradecimientos)
+\usepackage[usestackEOL]{stackengine}
+
+%Nuevo comando para escribir currier en los caption
+\protected\def\psverb#1{\def\innerpsverb##1#1{\texttt{##1}}\innerpsverb}
+
+% Paquete para crear acŕonimos
+\usepackage{acronym}
+
+% Paquete de símbolos usado para escribir el simbolo de grados (deg)
+\usepackage{gensymb}
+
+
+\usepackage{blindtext}

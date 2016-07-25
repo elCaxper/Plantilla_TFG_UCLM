@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			Capitulo 8				                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclusiones} \label{cap8}
+
+En este capítulo se muestran las conclusiones que se pueden extraer del trabajo y se expoenen posibles trabajos futuros.
+
+%\newpage
+
+\section{Cumplimiento de los objetivos} \label{s8_1}
+
+Durante el trabajo se han llevado a cabo todos los objetivos propuestos como se muestra a continuación:
+
+\begin{itemize}
+	\item Se han modelado distintos robots en ROS usando URDF y Xacro, también se ha conseguido realizar una parametrización de algunas propiedades de estos a través de una interfaz gráfica.
+	\item Se ha generado el control para todos los robots modelados a través de ROS y para algunos de ellos se han creado interfaces gráficas para controlar el movimiento.
+	\item Se han realizado de forma satisfactoria las simulaciones en Gazebo comprobando que el software de control funciona de forma correcta.
+	\item Se han realizado experimentaciones incluyendo ROS en un hardware embebido como la Intel Edison y controlando robots reales.
+	\pdfcomment[icon=Note,color=blue]{No sé que más hemos hecho que no aparezca aquí}
+\end{itemize}
+
+
+
+
+\section{Estructura de los paquetes creados} \label{s8_2}
+
+	Todos los paquetes creados durante el proyecto se pueden descargar del repositorio de Gustavo Plaza (\href{https://github.com/elCaxper/ROS}{https://github.com/elCaxper/ROS}).
+	
+	Cada robot se ha dividido en tres paquetes: uno para la descripción, otro para la simulación en Gazebo y otro para el control, el contenido de cada uno de ellos se muestra a continuación:
+	
+	\begin{itemize}
+		\item En el paquete de descripción se encuentra el URDF y el archivo \verb|.launch| para su visualización en RViz. 
+		\item En el paquete de Gazebo se encuentra el archivo que complementa al URDF con los \textit{plugins} necesarios y etiquetas necesarias para cargar el URDF en Gazebo, en este paquete también está el archivo del mundo de Gazebo.
+		\item En el paquete de control se encuentran los archivos para lanzar \verb|ros_control|, estos son un \verb|.launch| para lanzar los nodos y un \verb|.yaml| donde se configura el controlador, en este paquete también se encuentran los archivos para la generación de las trayectorias y las interfaces gráficas, los archivos de Python en la carpeta \verb|script|, el código fuente en C++ en la carpeta \verb|src| y las cabeceras en \verb|include|.
+	\end{itemize}
+	
+	
+	 
+	
+	Todos los paquetes cuentan con un archivo \verb|CMakeLists.txt| que permite la construcción del paquete mediante \verb|catkin_make| y el archivo \verb|package.xml| donde se definen parámetros del paquete como la licencia y dependencia de otros paquetes.
+	
+	A continuación se muestra la estructura en árbol de los paquetes para un robot:
+	
+	\begin{verbatim}
+|-src
+|---robot
+|-----robot_control
+|-------CMakeLists.txt
+|-------package.xml
+|-------config
+|---------robot_control.yaml
+|-------include
+|---------clases.h
+|-------launch
+|---------robot_control.launch
+|-------script
+|---------script.py
+|-------src
+|---------main.cpp
+|---------clases.cpp
+|-----robot_description
+|-------CMakeLists.txt
+|-------package.xml
+|-------launch
+|---------visualizar_rviz.launch
+|-------urdf
+|---------mi_robot.xacro
+|---------meshes
+|-----------meshes.stl
+|-----robot_gazebo
+|-------CMakeLists.txt
+|-------package.xml
+|-------launch
+|---------robot.launch
+|-------urdf
+|---------robot_gazebo.xacro
+|-------worlds
+|---------gazebo_world.world
+\end{verbatim}
+
+El  proyecto completo cuenta con un total de 12791 lineas de código repartidas por los siguientes lenguajes de programación como se puede ver en la siguiente tabla.
+\newpage
+\begin{verbatim}
+--------------------------------------------------------
+Language        files     blank   comment       code
+--------------------------------------------------------
+Python            36      1542       1060       8192
+MATLAB            18       246        540       1570
+XML               32       238        431       1340
+CMake             28       477       1990        687
+YAML              15        35         62        453
+C++                4        85         73        288
+make               2        82         90        184
+C/C++ Header       2        35         35         77
+---------------------------------------------------------
+SUM:             137      2740       4281     12791
+---------------------------------------------------------
+\end{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			Seccion				                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Trabajos futuros} \label{s8_3}
+
+	Existen diferentes trabajos que pueden ser realizados basados en este proyecto. A continuación se muestran algunos, todos los trabajos propuestos usan ROS por lo que se recomienda usar la distribución más nueva en ese momento. 
+	
+	\subsection{Planificación de locomoción}
+	
+		Una vez que se han generado trayectorias para los distintos movimientos de un robot bípedo, un posible trabajo futuro consiste en generar caminadas para llevar el robot de un punto a otro.
+		
+		Existe un stack de ROS llamado \verb|humanoid_navigation| que contiene el paquete \verb|foot_planner| que permite llevar a cabo una planificación de locomoción.
+		
+		El paquete permite usar distintos planificadores y distintas heurísticas. Una vez definidos los parámetros del paso del robot, el paquete proporciona diferentes servicios, uno de ellos es \verb|plan_| \verb|footsteps| que planifica la secuencia de pasos para llegar de una posición de inicio a una posición final, el servicio se encarga de publicar en diferentes tópicos la posición de los pasos planificados, el camino planificado y el coste del camino. En la Fig. \ref{Figura8_01} puede verse un ejemplo de la planificación de locomoción. El trabajo consistiría en transformar las posiciones de estos pasos en movimientos del bípedo, para ello es necesario crear uno o varios nodos que suscribiéndose a los tópicos del planificador varíen los parámetros de la locomoción del bípedo.
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[width=0.45\linewidth]{capitulo_08/figuras_dir/planificador.png}
+			\caption{Ejemplo de planificación de la locomoción}
+			\label{Figura8_01}
+		\end{figure} 
+		
+		\subsection{IDE para URDF}
+			Una de las dificultades encontradas durante el proyecto ha sido la generación de la descripción del robot a través del URDF por lo que un entorno de desarrollo sería muy útil e importante para agilizar el proceso, también sería muy útil para la comunidad de ROS. Puesto que el lenguaje está basado en XML y es un lenguaje muy extendido existen librerías para operar con él en otros lenguajes como Java, C++ o Python y estos lenguajes están integrados en ROS. 
+			
+			Puesto que los nodos y subnodos obligatorios que forman parte del URDF para un eslabón y articulación se conocen, se puede realizar autocompletado. También se pueden detectar errores de sintaxis si la etiqueta de un nodo o subnodo no se ha cerrado correctamente o los argumentos no son correctos. Esto también va a permitir resaltar las palabras clave del lenguaje que es útil a la hora de escribir código.
+			
+			El IDE también puede ser compatible para archivos \verb|xacro| ya que la sintaxis es similar. Si la IDE se desarrolla en Python es posible incluir el código de ROS que transforma un \verb|xacro| a URDF y poder realizarlo en el entorno de desarrollo. Un complemento que puede tener el IDE es la visualización de URDF, esto ayuda a la hora de la generación del mismo viendo que se está realizando de la forma correcta, para llevar esto a cabo se sugiere usar las librerías de RViz disponibles para C++ y python, usando los nodos de ROS \verb|robot_state_publisher| que pueden permitir integrar la visualización de RViz en el IDE con la cabeceras que se ven a continuación:
+			
+			\begin{lstlisting}[caption = Incluir librerías de RViz,language=C++]
+#include <RViz/visualization_manager.h>
+#include <RViz/display.h>
+			\end{lstlisting}
+			
+			El IDE no solo debe permitir crear nuevos URDF sino también editarlos, para ello se sugiere usar \verb|urdf_parser| para cargar el URDF. Para comprobar la validez del URDF cargado se sugiere usar un esquema XSD donde se debe definir la estructura del URDF ya que es conocida. En la Fig. \ref{Figura8_02} se puede ver una imagen de una posible forma que puede tener el entorno de desarrollo.
+			
+			\begin{figure}[htb]
+				\centering
+				\includegraphics[width=0.5\linewidth]{capitulo_08/figuras_dir/ide_urdf.png}
+				\caption{Posible forma para el IDE de URDF}
+				\label{Figura8_02}
+			\end{figure} 

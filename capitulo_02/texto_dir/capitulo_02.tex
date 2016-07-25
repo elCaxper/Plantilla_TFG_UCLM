@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			Capitulo 2					              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter[Título corto]{Título largo} \label{cap2}
+
+\newpage
+
+	
+\section{Sección}
+	
+	\blindtext
+	
+	Ejemplo de código:
+	
+\begin{lstlisting}[caption = Esto es código,language=C++]
+// 'Hello World!' program 
+
+#include <iostream>
+
+int main()
+{
+std::cout << "Hello World!" << std::endl;
+return 0;
+}
+\end{lstlisting}
+
+	\subsection{Subsección}
+	
+		\blindtext
+		
+		Para usar los acrónimos es necesario usar: \ac{IMU}. Aparece la definición y el acrónimo.
+		
+		Cuando vuelva a salir el acrónimos de nuevo \ac{IMU}, ya no aparece la definición.
+		
+		\subsubsection{Subsubsección}
+			\blindtext
+			
+			\blindtext
+			
+			Para crear una tabla:
+			
+			\begin{table}[htb]
+				\begin{center}
+					\begin{tabular}{|l||l|l|}
+						\hline
+						&    Frecuencias (rad/s)  & Fases (rad) \\
+						\hline \hline
+						Art1   &    1 &  2 \\ \hline
+						Art2   &    3 &  4 \\ \hline
+						Art3   &    5 &  6 \\ \hline
+						Art4   &    7 &  8 \\ \hline					
+					\end{tabular}
+					\caption{Mi tabla}
+					\label{tabla:Tabla_1}
+				\end{center}
+				
+				Arriba se puede ver la Tabla \ref{tabla:Tabla_1}.
+			\end{table}

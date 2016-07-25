@@ -1,0 +1,299 @@
+
+@misc{ROS.org_|_Powering_the_world's_robots_2016-06-13,
+	author = {ROS.org},
+	title = { Powering the world's robots},
+	howpublished = "\url{http://www.ros.org/}",
+	note = "[Online; Accessed: 2016-06-13]"
+}
+
+@misc{Gazebo_2016-06-13,
+	author = {Gazebo},
+	title = {Gazebo simulator},
+	howpublished = "\url{http://gazebosim.org/}",
+	note = "[Online; Accessed: 2016-06-13]"
+}
+
+@misc{Webots:_robot_simulator_2016-06-13,
+	author = {Webots},
+	title = {robot simulator},
+	howpublished = "\url{https://www.cyberbotics.com/}",
+	note = "[Online; Accessed: 2016-06-13]"
+}
+
+@misc{Coppelia_Robotics_v-rep:_Create._Compose._Simulate._Any_Robot_2016-06-13,
+	author = {Coppelia Robotics v-rep},
+	title = {Create. Compose. Simulate. Any Robot},
+	howpublished = "\url{http://www.coppeliarobotics.com/}",
+	note = "[Online; Accessed: 2016-06-13]"
+}
+
+@misc{morse_-_Openrobots_2016-06-13,
+	author = {Openrobots},
+	title = {morse },
+	howpublished = "\url{https://www.openrobots.org/wiki/morse/}",
+	note = "[Online; Accessed: 2016-06-13]"
+}
+
+@misc{ackermann,
+	author = {{ROS Wiki}},
+	title = {Ackermann {{Group}}},
+	howpublished = "\url{http://wiki.ros.org/Ackermann\%20Group}",
+	note = "[Online; Accessed: 2016-06-23]"
+}
+
+@misc{orocos,
+	author = {{The Orocos Project}},
+	title = {The {{Orocos Real-Time Toolkit}}},
+	howpublished = "\url{http://www.orocos.org/rtt}",
+	note = "[Online; Accessed: 2016-06-23]"
+}
+
+@misc{direct,
+	author = {{{TTU Advanced Robotics}}},
+	title = {Direct {{Kinematics}} of {{Wheeled Platforms}}},
+	howpublished = "\url{http://ttuadvancedrobotics.wikidot.com/direct-kinematics}",
+	note = "[Online; Accessed: 2016-06-14]"
+}
+
+@misc{zxc_ros.org_,
+	author = {{ROS}.org},
+	title = {{{Powering}} the world's robots},
+	howpublished = "\url{http://www.ros.org/}",
+	note = "[Online; Accessed: 2016-07-11]"
+}
+
+@misc{lectoraatmechatronica,
+	author = {lectoraatmechatronica},
+	title = { {{Mobile Robot Balance}}, the zero moment point},
+	howpublished = "\url{https://lectoraatmechatronica.wikispaces.com/Mobile+Robot+Balance,+the+zero+moment+point}",
+	note = "[Online; Accessed: 2016-06-14]"
+}
+
+@misc{sistema2015,
+	author = {ROS},
+	title = {Sistema {{Operativo Rob{\'o}tico}}},
+	howpublished = "\url{https://es.wikipedia.org/w/index.php?title=Sistema_Operativo_Rob\%C3\%B3tico\&oldid=87117834}",
+	note = "[Online; Accessed: 2016-06-14]"
+}
+
+@misc{welcome,
+	author = {Microsoft},
+	title = {Welcome to {{Robotics Developer Studio}}},
+	howpublished = "\url{https://msdn.microsoft.com/en-us/library/bb648760.aspx}",
+	note = "[Online; Accessed: 2016-06-23]"
+}
+
+@misc{ezrobot,
+	author = {{{EZ-Robot Inc}}.},
+	title = {EZ-Robot teaches everyone how to build a robot.},
+	howpublished = "\url{https://www.ez-robot.com/default.aspx}",
+	note = "[Online; Accessed: 2016-06-28]"
+}
+
+@misc{urdfjoint,
+	author = {{ROS Wiki}},
+	title = {urdf/{{XML}}/joint},
+	howpublished = "\url{http://wiki.ros.org/urdf/XML/joint}",
+	note = "[Online; Accessed: 2016-06-29]"
+}
+
+
+@misc{urdflink,
+	author = {{ROS Wiki}},
+	title = {urdf/{{XML}}/link },
+	howpublished = "\url{http://wiki.ros.org/urdf/XML/link}",
+	note = "[Online; Accessed: 2016-06-29]"
+}
+
+
+@misc{tfmatlab,
+	author = {{{MATLAB}}},
+	title = {Access the tf {{Transformation Tree}} in {{ROS}} },
+	howpublished = "\url{http://es.mathworks.com/help/robotics/examples/access-the-tf-transformation-tree-in-ros.html}",
+	note = "[Online; Accessed: 2016-06-29]"
+}
+
+@misc{arquitecturamoveit,
+	author = {MoveIt!},
+	title = { Arquitectura MoveIt!},
+	howpublished = "\url{http://moveit.ros.org/documentation/concepts/}",
+	note = "[Online; Accessed: 2016-06-29]"
+}
+
+@misc{gazeboros,
+	author = {Gazebo},
+	title = { {{Tutorial}} : {{ROS}} control},
+	howpublished = "\url{http://gazebosim.org/tutorialstut=roscontrol/catconnectros}",
+	note = "[Online; Accessed: 2016-06-29]"
+}
+
+@misc{orocoskdl,
+	author = {orocos\_kdl},
+	title = {{{KDL}}::{{Tree Class Reference}}},
+	howpublished = "\url{http://docs.ros.org/hydro/api/orocoskdl/html/classKDL11Tree.html}",
+	note = "[Online; Accessed: 2016-06-29]"
+}
+
+@misc{rosnode,
+	author = {{{ROS}}},
+	title = {{{Robot Operating System}} - {{G{\'e}n{\'e}ration Robots}}},
+	howpublished = "\url{http://www.generationrobots.com/en/content/55-ros-robot-operating-system}",
+	note = "[Online; Accessed: 2016-07-07]"
+}
+
+@misc{swurdfexporter,
+	author = {sw\_urdf\_exporter -},
+	title = { {{ROS Wiki}}},
+	howpublished = "\url{http://wiki.ros.org/sw_urdf_exporter}",
+	note = "[Online; Accessed: 2016-07-11]"
+}
+
+@misc{qtmanual,
+	author = {Qt},
+	title = { {{Designer Manual}} | {{Qt}} 4.8},
+	howpublished = "\url{http://doc.qt.io/qt-4.8/designer-manual.html}",
+	note = "[Online; Accessed: 2016-07-11]"
+}
+
+@misc{irb120,
+	author = {{{IRB}} 120 - {{Industrial Robots}}},
+	title = {{{Robotics}} | {{ABB}}},
+	howpublished = "\url{http://new.abb.com/products/robotics/industrial-robots/irb-120}",
+	note = "[Online; Accessed: 2016-07-11]"
+}
+
+@misc{cuadrupedo_crerp,
+	author = {Oricom},
+	title = {{{Technologies Creep Stability Page}}},
+	howpublished = "\url{http://www.oricomtech.com/projects/proj2/crp-stab.htm}",
+	note = "[Online; Accessed: 2016-07-11]"
+}
+
+@misc{inteledison,
+	author = {Intel},
+	title = {{{Guia}} introductoria para la placa {{Intel}} {{Edison}}},
+	howpublished = "\url{https://software.intel.com/es-es/iot/library/edison-getting-started}",
+	note = "[Online; Accessed: 2016-07-11]"
+}
+
+@misc{bworld,
+	author = {Ingo Lütkebohle},
+	title = {{BWorld Robot Control Software}},
+	howpublished = "\url{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software/}",
+	year = {2008}, 
+	note = "[Online; accessed 19-July-2008]"
+}
+
+
+
+@misc{Bambino,
+	author = {David {{Buckley}}},
+	title = { {{Bambino}} biped robot {{Build}}},
+	howpublished = "\url{http://davidbuckley.net/DB/Bambino/Bambino.htm}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{Frea,
+	author = {David {{Buckley}}},
+	title = { {{Frea}} biped robot},
+	howpublished = "\url{http://davidbuckley.net/DB/Frea/Frea.htm\#spec}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{LittleDog,
+	author ={LittleDog},
+	title = {LittleDog},
+howpublished = "\url{http://robotwhisperer.org/learning-locomotion/}",
+note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{Aibo,
+	author ={Tekkotsu},
+	title = { {{Aibo ERS}}-7},
+	howpublished = "\url{http://www.tekkotsu.org/robots/ERS7.html}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{iCub,
+	author ={iCub},
+	title = {Wiki for {{iCub}} and {{Friends}}},
+	howpublished = "\url{http://wiki.icub.org/wiki/Main_Page}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{bigfoot,
+	author ={David {{Buckley}}},
+	title = { {{A Minimalist Approach}} to {{Biped Walking Robots}}},
+	howpublished = "\url{http://davidbuckley.net/DB/A_Minimalist_Approach_to_Biped_Walking.htm\#BigFoot}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{BRATJr,
+	author ={lynxmotion},
+	title = { lynxmotion},
+	howpublished = "\url{http://www.lynxmotion.com/images/html/build112.htm}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+
+@misc{DeadDuck,
+	author ={Dead Duck Walking},
+	title = {Biped walker with 3 servos | {{Let}}'s {{Make Robots}}!},
+	howpublished = "\url{http://letsmakerobots.com/node/29379}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+
+@misc{Loki,
+	author ={David {{Buckley}}},
+	title = { {{Loki}}},
+	howpublished = "\url{http://davidbuckley.net/DB/Loki.htm}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+
+
+@misc{tecfoot,
+	author ={{{TecFoot}}},
+	title = {{{Biped Walker}}},
+	howpublished = "\url{http://davidbuckley.net/DB/Loki.htm}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{rqhuno,
+	author ={{{Robobuilder}}},
+	title = {RQ-HUNO},
+	howpublished = "\url{https://robosavvy.com/RoboSavvyPages/Robobuilder/UsersManual/Robobuilder_User_Guide_EN.pdf}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+
+@misc{quadruped2d,
+	author ={{{Let}}'s {{Make Robots}}!},
+	title = {Quadruped - {{2DOF}} },
+	howpublished = "\url{http://letsmakerobots.com/node/38481}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{arduinohex,
+	author ={Engineer-this},
+	title = {An {{Arduino Quadruped Robot}}},
+	howpublished = "\url{http://engineer-this.com/quadruped.shtml}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+
+@misc{_fzi_????,
+  title = {{{FZI Forschungszentrum Informatik}}: {{LAURON}}},
+  timestamp = {2016-07-12T19:43:56Z},
+  urldate = {2016-07-12},
+  url = {http://www.fzi.de/en/forschung/projekt-details/lauron/},
+  file = {FZI Forschungszentrum Informatik\: LAURON:/home/kaiser/.mozilla/firefox/iysb44tu.default/zotero/storage/MXTEMBPF/lauron.html:text/html}
+}
+
+@misc{LAURON,
+	author ={{{FZI Forschungszentrum Informatik}}},
+	title = { {{LAURON}}},
+	howpublished = "\url{http://engineer-this.com/quadruped.shtml}",
+	note = "[Online; Accessed: 2016-07-12]"
+}
+

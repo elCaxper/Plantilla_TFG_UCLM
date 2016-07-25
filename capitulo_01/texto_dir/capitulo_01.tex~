@@ -1,0 +1,165 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			     Capitulo 1 			    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introducción} \label{cap1}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+%En este primer capítulo únicamente se mostrará un breve explicación del proyecto.
+	Este proyecto constituye el \acs{TFG} de Gustavo Plaza Roma que ha sido dirigido por el Dr. Francisco Ramos de la Flor y por Andrés San Millán Rodríguez. El proyecto se ha desarrollado dentro del Grupo RobInd formado por profesores del área de Ingeniería de Sistemas y Automática e investigadores jóvenes de la Universidad de Castilla-La Mancha.
+	
+	El proyecto se encuentra enmarcado dentro de un proyecto de investigación aplicada llamado BOTBLOQ cuyo objetivo principal del proyecto es la construcción una plataforma \acs{DIY}para facilitar el diseño, fabricación y programación de robots orientada a tanto al desarrollo de competencias \acs{STEM} como al desarrollo de robots personales.
+	
+	El proyecto BOTBLOQ es financiado por la empresa BQ a través del \acs{CDTI} que es es una Entidad Pública Empresarial, dependiente del Ministerio de Economía y Competitividad, que promueve la innovación y el desarrollo tecnológico de las empresas españolas.
+	
+	En el proyecto BOTBLOQ participan los Grupos de Investigación RobInd y  Alarcos de la Universidad de Castilla La Mancha a los que se les han subcontradado distintas tareas del proyecto.
+  
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			Seccion          					  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Motivación} \label{s1_1}
+	
+	%Hablar sobre robótica educativa y botblock
+	% No hablar de ROS
+	Los robots están llamados a revolucionar el siglo XXI al igual que lo hizo la información en el siglo XX. De hecho, los robots están cada vez más presentes en todos los aspectos sociales/económicos de la humanidad.	
+	
+	% % % % % % % % % % % % % % %
+	
+	Los robots ya son utilizado para luchar en las guerras, ayudar con la cirugía y conducir coches. En resumen, los robots pueden realizar un buen número de los puestos de trabajo que los humanos hacen actualmente, a menudo de manera más eficiente y con un coste mucho menor.
+	
+	Debido a que los robots pueden mejorar drásticamente la productividad y compensar las diferencias regionales en los costes de mano de obra y la disponibilidad, es probable que tengan un impacto importante en la competitividad de las empresas y de los países. Por ejemplo, los países con un mayor número de programadores de robots e infraestructuras robóticas podrían ser más atractivos para los fabricantes que países con mano de obra más barata. Cambios como éstos van a alterar fundamentalmente la dinámica competitiva de la economía mundial.
+	
+	
+	% % % % % % % % % % % % % % % % % % % % % % %
+	
+	La Robótica de Consumo, también llamada Robótica Personal, es uno de los segmentos de la robótica que más va a crecer en los próximos años según diferentes expertos.
+	
+	La Robótica de Consumo incluye desde los robots domésticos, ya sean de limpieza, mascotas o de tele asistencia, la robótica educativa y la robótica lúdica, juguetes robóticos, drones, etc., que es el segmento más amplio en cuanto a número de fabricantes y el que parece estar creciendo más rápidamente.
+	
+	% % % % % % % % % % % % % % % % % % % % % % % %
+	
+	El tamaño de esta oleada que viene de la robótica es asombroso: el gasto en los robots en todo el mundo se espera pase de un poco más de \$ 15 mil millones en 2010 a cerca de \$ 67 mil millones para el año 2025 (Fig. \ref{Figura1_01}). Al frente de este crecimiento se encuentra la caída de los precios y la mejora de rendimiento de los robots. El coste de los robots y componentes de alta calidad está disminuyendo rápidamente, mientras que las CPUs son cada vez más rápidas, y la programación de aplicaciones es cada vez más fácil. A medida que los robots son más baratos, más pequeños y más eficientes energéticamente, ganan flexibilidad y finura y se produce un aumento de la amplitud de las aplicaciones potenciales \citep{sander2014rise}.  
+	
+	\begin{figure}[htb]
+		\centering
+		\includegraphics[width=0.6\linewidth]{capitulo_01/figuras_dir/crecimiento_robotica.png}
+		\caption{Crecimiento previsto de la robótica entre los años 2000 y 2025}
+		\label{Figura1_01}
+	\end{figure} 
+	
+	% % % % % % % % % % % % % % % % % % % % % %
+	
+	Los robots educativos son utilizados por todos los niveles educativos ya que los kits de robótica están orientados a diferentes edades y niveles de habilidad. La introducción de la robótica educativa en el círculo escolar desde edades tempranas proporciona muchas ventajas para el desarrollo de competencias relacionadas con las matemáticas, la ingeniería y la ciencia. La robótica educativa da la oportunidad de resolver problemas ``reales'', contextualizar los contenidos, trabajar competencias básicas, ofrecer mecanismos y herramientas que les permitan la resulución de problemas de forma autónoma.
+	
+	En 2007, de acuerdo con el estudio de mercado ``Educational and Entertainment Robot Market Strategy, Market Shares, and Market Forecasts, 2008-2014'' \citep{educational2007}, los kits de robótica educativa alcanzaron 541.000 unidades en todo el mundo. Este mismo estudio revelaba que en 2014, las ventas podrían haber alcanzado ya los 35,8 millones de unidades.
+	
+	%Actualmente, la mayoría de los desarrollos robóticos se integran con el software de ROS, que es un middleware robótico que funciona en múltiples arquitecturas y sobre el sistema operativo Linux, es software libre bajo licencia BSD y se comunica empleando TCP/IP tanto para el control de operaciones de procesos como para enviar señales a los actuadores.
+	
+	%Hoy en día la robótica juega un papel muy importante en la sociedad y en un futuro próximo será más importante cuando sea capaz de realizar tareas más complejas. La robótica también forma parte de la educación a través de la robótica educativa como un método de aprendizaje que permite desarrollar las capacidades creativas y de organización, fomentar el trabajo en grupo, promover la necesidad de experimentar y de descubrir nuevas habilidades, el interés por investigar \dots Estos son algunos de los objetivos de la robótica educativa.
+	
+
+	
+	%La plataforma ROS se vuelve muy atractiva para este tipo de proyectos ya que es multilenguaje, es software libre bajo licencia BSD, incluye un alto nivel de abstracción para acceder a hardware externo, tales como sensores y actuadores. Debido a la implementación modular de ROS, funcionalidades adicionales se pueden incorporar fácilmente a la plataforma. 
+	
+	%ROS se constituye como un middleware ya que se trata de un software que asiste a las aplicaciones en concreto diseñadas en este proyecto así como a cualquier aplicación de propósito general diseñada sobre él, para interactuar o comunicarse entre sí y el	hardware utilizado. Funciona como una capa de abstracción de software distribuida situada entre las capas de aplicaciones y las capas inferiores. El middleware abstrae de la complejidad y heterogeneidad de las redes de comunicaciones subyacentes, así como de los sistemas operativos y lenguajes de programación, proporcionando una API para la fácil programación y manejo de las aplicaciones distribuidas, punto clave para la consecución de este proyecto.
+	
+	\subsection{Proyecto BOTBLOQ} \label{s1_1_1}
+
+		BOTBLOQ tiene como finalidad definir una arquitectura robótica modular que permita a los usuarios de diferente nivel construir y programar sus propios robots.
+
+		El proyecto BOTBLOQ está destinado a diferentes niveles, el nivel del usuario se asocia al conocimiento que este tenga sobre robótica y en el nivel de niños o jóvenes se encuentra más vinculado a la edad. Este proyecto pretende abarcar un amplio rango de usuarios con distintos niveles de conocimiento:
+		\begin{itemize}
+			\item Nivel Enseñanza Infantil: robots como instrumento para estimulación cognitiva temprana.
+			\item Nivel Enseñanza Media: robots como instrumento para aprendizaje STEM.
+			\item Nivel Enseñanza Superior: robots como instrumento para adquirir competencias ingenieriles (Mecánica, Electrónica, Automática e Informática).
+			\item Nivel Investigación y Desarrollo (Universidades y Centros de Investigación): robots como resultado de desarrollos en Universidades y Centros de Investigación en Robótica e Inteligencia Artificial aplicada.
+		\end{itemize}
+
+		Los dos últimos puntos tienen como objetivo el desarrollar una arquitectura que permita realizar diseños robóticos que cubran necesidades docentes en enseñanzas medias y superiores y que permita también desarrollos de investigación en Universidades y Centros de Investigación.
+		
+		Los objetivos metodológicos del proyecto responden a la necesidad de desarrollar un método que permita de manera lógica la creación de robots basados en la filosofía DIY. La metodología definida permite el diseño de robots con distintas estructuras, en este sentido se abordan varios métodos de diseño:
+		\begin{itemize}
+			\item Diseño manual, en el que se permite al usuario generar cualquier configuración.
+			\item Diseño paramétrico, en el que a partir de una tarea y un conjunto de parámetros se generar las estructuras mecánicas y los módulos electrónicos que permiten implementar la tarea bajo los parámetros especificados.
+			\item Diseño predefinido, donde únicamente se especifica la tarea que se desea realizar y el generador automáticamente ofrece alternativas completamente finalizadas.
+		\end{itemize}
+		
+		Como objetivos tecnológicos se pretende crear un entorno de programación rápida y visual desde donde mediante bloques se represente las tareas comunes que puede desarrollar un robot. Otro objetivo es la creación de una interfaz con distintos grados de complejidad para satisfacer un amplio abanico de usuarios, este objetivo busca que el proyecto BOTBLOQ pueda tener una alta penetración en el mercado y en la sociedad, comprendiendo la mayor parte posible de estratos sociales y edades, puesto que es una realidad que los jóvenes se ven muy atraídos por este tipo de plataformas.
+		
+		El proyecto también pretende diseñar módulos funcionales para dotar al robot modular de una gran versatilidad. Mediante la conexión de ellos se permite implementar un mayor número de aplicaciones distintas. Los módulos se pueden clasificar según su funcionalidad en módulos estructurales que simplemente dan forma al robot, módulos de actuación que contienen elementos que producen movimiento y módulos de telemetría para obtener información del robot. Además debe existir un módulo de computación encargado de coordinar el resto de módulos.
+		
+		Otro objetivo del proyecto es la integración de los robots DIY con \textit{smartphones} y dispositivos móviles, ya que en la actualidad estos incluyen un conjunto de sensores muy interesantes en el mundo de la robótica como acelerómetros, giróscopos, sensores de proximidad, GPS, cámara, ...
+
+\subsection{Objetivos} \label{s1_1_2}
+
+	Los objetivos del presente TFG son:
+	
+	\begin{itemize}
+		% Hablar que robots?
+		%\item Modelado de diferentes robots a través de su definición con URDF y diseño del software de control usando ROS, los robots modelados serán:
+		\item Modelado geométrico de una variedad de robots móviles así como manipuladores industriales. Se proponen los siguientes ejemplos demostrativos:
+		\begin{itemize}
+			\item Robot humanoide: se definirá el control para el robot para distintos tipos de locomoción.
+			\item Robot ápodo: robot con forma de serpiente compuesto por módulos posicionados en cero y noventa grados.
+			\item Robots móviles con ruedas: se va a modelar un robot de tipo diferencial y otro de tipo \textit{skid-steer}.
+			\item Robot hexápodo: robot con seis patas, se estudiarán las diferentes formas de locomoción.
+			\item Robot cuadrúpedo: robot de cuatro patas para el que se van a generar las trayectorias para dos tipos de locomoción.
+		\end{itemize}
+		\item Creación de una interfaz para interactuar con el robot real mediante hardware embebido. En este caso el hardware embebido situado en el robot se comunica con el PC a través una red Wi-Fi, donde el PC realiza peticiones para mover los distintos motores.
+		\item Generación de una locomoción estable para robots caminantes. %, para ello se genera una locomoción a través de la resolución de la cinemática de cada pata. Una vez realizado esto se van a analizar las trayectorias seguidas y se extraen las componentes frecuenciales principales para generar nuevas señales senoidales que se aplicarán a los robots.
+		\item Simulación dinámica de los robots creados a través del motor de simulación físicas como \acs{ODE}. % a través del simulador Gazebo. 
+	\end{itemize}
+	
+	%En cuanto al software de simulación se ha elegido ROS dado que, siendo una plataforma genérica para la creación de software para todo tipo de robots tanto reales como simulados, Gazebo consiste en un simulador tridimensional de cuerpos rígidos articulados, entre su infinidad de programas y herramientas. Gazebo permite crear diferentes escenarios de simulación para uno o varios robots ofreciendo una interfaz gráfica para las simulaciones así como permitiendo la lectura y entrada de datos a los robots que se estén simulando, pudiendo ser modificado todos los parámetros en tiempo de simulación.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			Seccion          					  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Alcance} \label{s1_2}
+%	En el proyecto se va a trabajar con ROS como framework para el desarrollo de los robots debido sobre todo a su modularidad, la posibilidad comunicación entre procesos creados a través de diferentes lenguajes y que es gratuito. ROS tiene algunas desventajas como la dificultad de aprendizaje, solo permite un robot y no asegura tiempo real. Estas desventajas se solucionarán con ROS2.0 aunque existen otros frameworks Rock\footnote{the Robot Construction Kit} basado en Orocos RTT \footnote{Orocos Real-Time Toolkit} que proporciona un framework en C++ para el control de sistemas con la posibilidad de realizarlo en tiempo real \citep{orocos}. También existe Microsoft Robotics Studio que también permite la simulación y control de robots a través Windows \citep{welcome}.
+	
+%	Se ha usado URDF \footnote{Unified Robot Description Format} debido a que es el lenguaje más extendido en la actualidad aunque tiene ciertas limitaciones como que solo permite definir un robot, no permite definir cadenas cerradas, no permite definir grupos aunque esto es solucionado con el formado srdf\footnote{Semantic Robot Description Format} usado por MoveIt!, no permite permite incluir sensores. Tampoco es posible definir estados iniciales de las articulaciones. Se han descartado otras alternativas para la descripción de los robots como sdf\footnote{Scene Definition Format} que fue definido por el simulador Gazebo aunque es independiente de este, tiene las ventaja de que incluye una API de C++, algunos tipos de sensores y la definición de robot en el mundo aunque también tiene desventajas como que está pensado para la simulación y no soporta grupos. Existe un suplemento para URDF llamado SMURF diseñado como una extensión de URDF y alternativa a SDF que permite que el URDF sea más legible para los humanos y más modular. En los próximos años se publicará URDF2.0 que viene a solucionar las limitaciones de URDF. La transformación de URDF a SDF es directa aunque no al contrario.
+	
+%	El robot ápodo se ha creado con la unión de servos perpendiculares entre sí para permitir realizar más movimientos ya que si todos los servos tiene la misma dirección solo se podrá generar el movimiento de gusano. 
+	
+%	Los robots móviles que se han elegido son el tipo diferencial y el tipo ``skid-steer'', el sistema Ackerman no se va a modelar ni controlar ya que es menos usado en robótica que los otros dos tipos. ROS proporciona un paquete para controlar este tipo de robots \citep{ackermann}. 
+	
+%	El robot bípedo tendrá una configuración de seis grados de libertad en cada pierna ya que esta configuración permite realizar todo tipo de movimientos aunque existen robots bípedos con menos grados de libertad. 
+	
+%	El robot hexápodo tiene las patas se va a modelar con las patas en los lados en lugar de formando un círculo que permite mejorar la estabilidad en terrenos difíciles aunque complica la generación de trayectorias. 
+	
+%	El robot manipulador cuenta con una cadena cinemática con seis grados de libertad, no cuenta con ningún efector final aunque lo más común es usar una garra. En caso de que se quiera usar un efector final, es puede definir usando MoveIt!.
+	
+	
+	
+% Que se hace y que no
+	% que tipos de robot se modelan y cuales no
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			Seccion				                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estructura de la memoria} \label{s1_3}
+ 
+	% Decir de lo que se habla en cada capítulos (todos)
+	La memoria está estructurada como se indica a continuación.
+	
+	En el primer capítulo aparece una introducción al proyecto donde se habla de la motivación y los objetivos.
+	
+	En el capítulo dos se realiza un estado del arte sobre la robótica modular centrándose en la electrónica con la que cuenta cada módulo.
+	
+	En el tercer capítulo se realiza una introducción a ROS y sus componentes y funcionamiento aunque para la lectura del trabajo es necesario tener conocimientos básicos sobre el funcionamiento de ROS y el sistema operativo Linux.
+	
+	En el cuarto capítulo se muestra la descripción y simulación de los distintos robots en Gazebo. También aparece como se ha llevado a cabo la experimentación aplicando el control usado en la simulación a robots reales.
+	
+	En el quinto y sexto se realiza un estudio de la locomoción de un robot hexápodo y un robot bípedo para después generar trayectorias a través de señales senoidales.
+	
+	
+	
+	% Código dividido por tipo de código (descripcion, control, tratamiento de datos, GUIs, ...)
+	% No poner todo el código

@@ -1,0 +1,100 @@
+@inproceedings{romanishin2013m,
+  title={M-blocks: Momentum-driven, magnetic modular robots},
+  author={Romanishin, John W and Gilpin, Kyle and Rus, Daniela},
+  booktitle={Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ International Conference on},
+  pages={4288--4295},
+  year={2013},
+  organization={IEEE}
+}
+@article{kurokawa2008distributed,
+  title={Distributed self-reconfiguration of M-TRAN III modular robotic system},
+  author={Kurokawa, Haruhisa and Tomita, Kohji and Kamimura, Akiya and Kokaji, Shigeru and Hasuo, Takashi and Murata, Satoshi},
+  journal={The International Journal of Robotics Research},
+  volume={27},
+  number={3-4},
+  pages={373--386},
+  year={2008},
+  publisher={SAGE Publications}
+}
+@inproceedings{davey2012emulating,
+  title={Emulating self-reconfigurable robots-design of the SMORES system},
+  author={Davey, Jay and Kwok, Ngai and Yim, Mark},
+  booktitle={Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on},
+  pages={4464--4469},
+  year={2012},
+  organization={IEEE}
+}
+@inproceedings{jorgensen2004modular,
+  title={Modular ATRON: Modules for a self-reconfigurable robot},
+  author={Jorgensen, Morten Winkler and Ostergaard, Esben Hallundbaek and Lund, Henrik Hautop},
+  booktitle={Intelligent Robots and Systems, 2004.(IROS 2004). Proceedings. 2004 IEEE/RSJ International Conference on},
+  volume={2},
+  pages={2068--2073},
+  year={2004},
+  organization={IEEE}
+}
+@article{wei2011sambot,
+  title={Sambot: A self-assembly modular robot system},
+  author={Wei, Hongxing and Chen, Youdong and Tan, Jindong and Wang, Tianmiao},
+  journal={Mechatronics, IEEE/ASME Transactions on},
+  volume={16},
+  number={4},
+  pages={745--757},
+  year={2011},
+  publisher={IEEE}
+}
+
+@article{de2013mobile,
+	title={Mobile robot indoor autonomous navigation with position estimation using rf signal triangulation},
+	author={De Melo, Leonimer Fl{\'a}vio and da Silveira Junior, Almiro Franco and others},
+	year={2013},
+	publisher={Scientific Research Publishing}
+}
+
+@article{kozlowski2004modeling,
+	title={Modeling and control of a 4-wheel skid-steering mobile robot: From theory to practice},
+	author={Koz{\l}owski, K and Pazderski, D and Rudas, I and Tar, J},
+	year={2004}
+}
+
+@article{sander2014rise,
+	title={The rise of robotics},
+	author={Sander, Alison and Wolfgang, Meldon},
+	journal={BCG Perspectives. https://www. bcgperspectives. com/content/articles/business\_unit\_strategy\_innovation\_rise\_of\_robotics},
+	year={2014}
+}
+
+@article{educational2007,
+	title={Educational and Entertainment Robot Market Strategy, Market Shares, and Market Forecasts, 2008-2014},
+	author={Wintergreen Research},
+	journal={Wintergreen Research},
+	year={ March 1, 2008}
+}
+
+@article{polancodiseno,
+	title={Diseno y Construcci{\'o}n de un Robot Apodo},
+	author={Polanco, Jos{\'e} Alberto M{\'e}ndez and Camargo, Erika Amaro and Mel{\'e}ndez, Ang{\'e}lica Munoz and Manzanares, Eduardo F Morales and de Ciencias Computacionales, Coordinaci{\'o}n and No, Luis Enrique Erro}
+}
+
+@article{abubakar3kinematic,
+	title={Kinematic Analysis and Simulation of a 6-DOF Industrial Manipulator},
+	author={Abubakar, Umar and Zhongmin, Wang and Ying, Gao},
+	journal={International Journal of Science and Research (IJSR) Volume},
+	volume={3}
+}
+
+@inproceedings{machado2006overview,
+	title={An overview of legged robots},
+	author={Machado, JA Tenreiro and Silva, Manuel F},
+	booktitle={International Symposium on Mathematical Methods in Engineering},
+	year={2006}
+}
+
+@inproceedings{williams2012darwin,
+	title={DARwin-OP humanoid robot kinematics},
+	author={Williams, Robert L},
+	booktitle={ASME 2012 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference},
+	pages={1187--1196},
+	year={2012},
+	organization={American Society of Mechanical Engineers}
+}
